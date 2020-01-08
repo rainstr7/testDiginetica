@@ -36,9 +36,9 @@ function numberWithSpaces(x) {
 
 
 function clearcheckbox (){
-    $('#defaultCheck1').removeAttr("checked");
-    $('#defaultCheck2').removeAttr("checked");
-    $('#defaultCheck3').removeAttr("checked");
+	document.getElementById("defaultCheck1").checked = false;
+	document.getElementById("defaultCheck2").checked = false;
+	document.getElementById("defaultCheck3").checked = false;
   };
 
 document.querySelector('.autoFocus').focus();
