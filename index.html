@@ -1,0 +1,393 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<script src="https://kit.fontawesome.com/bd47df9781.js" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+		integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="style.css" />
+	<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+	<title>testFigma</title>
+</head>
+
+<body>
+	<div class="container">
+		<header>
+			<div class="d-flex bd-highlight align-items-center p-2 mb-3"
+				style="background-color: black; height: 100px;">
+				<div class="text-white">Шапка сайта</div>
+			</div>
+		</header>
+		<div class="container-fluid">
+			<div class="row no-gutters">
+				<div class="input-group mb-3 col pr-0 ">
+					<div class="input-group-prepend">
+						<button class="btn btn-outline-secondary" type="button" onclick="myUserSearch()"><i
+								class="fas fa-search"></i></button>
+					</div>
+					<input id="userInputSearch" type="search" class="form-control" placeholder="Input search..."
+						aria-label="" aria-describedby="basic-addon1">
+				</div>
+				<div class=" col-12 col-sm-3 col-md-2 col-lg-1">
+					<button class="btn btn-warning btn-block" type="button" onclick="myUserSearch()"><span>Найти</span>
+					</button>
+				</div>
+				<div class=".d-none .d-sm-block" style="width: 11px;"></div>
+				<div class="col-12 col-sm-3 col-md-2 col-lg-1">
+					<button type="button" onclick="closeButton()"
+						class="btn btn-light border btn-block"><span>Закрыть</span>
+					</button>
+				</div>
+			</div>
+
+			<div class="row mt-3 ml-1 align-items-center" id="searchBlock" style="display: none;">
+				<h4 class="mr-4"> Результаты по запросу</h4>
+				<span class="text-muted" id="userSearch"></span>
+				<span class="text-muted" id="userHistory"></span>
+			</div>
+			<div class="row mt-3" id="userSearchBox">
+				<div class="card mb-3 col-4 col-md-3 col-sm-4 border-0">
+					<div class="row no-gutters myImageEffect">
+						<div class="col-md-4 d-none d-sm-none d-md-block">
+							<a class="stretched-link" href="#"><img src="http://placehold.it/60x60" class="card-img"
+									alt="..."></a>
+						</div>
+						<div class="col-md-8 border-right">
+							<div class="card-body p-0 m-2">
+								<p class="card-text">Название категории</p>
+								<p class="card-text"><small class="text-muted">134 товара</small></p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="card mb-3 col-4 col-md-3 col-sm-4 border-0">
+					<div class="row no-gutters myImageEffect">
+						<div class="col-md-4 d-none d-sm-none d-md-block">
+							<a class="stretched-link" href="#"><img src="http://placehold.it/60x60" class="card-img"
+									alt="..."></a>
+						</div>
+						<div class="col-md-8 border-right ">
+							<div class="card-body p-0 m-2">
+								<p class="card-text">Название категории</p>
+								<p class="card-text"><small class="text-muted">134 товара</small></p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="card mb-3 col-4 col-md-3 col-sm-4 border-0">
+					<div class="row no-gutters myImageEffect">
+						<div class="col-md-4 d-none d-sm-none d-md-block">
+							<a class="stretched-link" href="#"><img src="http://placehold.it/60x60" class="card-img"
+									alt="..."></a>
+						</div>
+						<div class="col-md-8 border-right">
+							<div class="card-body p-0 m-2">
+								<p class="card-text">Название категории</p>
+								<p class="card-text"><small class="text-muted">134 товара</small></p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="card mb-3 col-4 col-md-3 col-sm-4 border-0">
+					<div class="row no-gutters myImageEffect">
+						<div class="col-md-4 d-none d-sm-none d-md-block">
+							<a class="stretched-link" href="#"> <img src="http://placehold.it/60x60" class="card-img"
+									alt="..."></a>
+						</div>
+						<div class="col-md-8 border-right ">
+							<div class="card-body p-0 m-2">
+								<p class="card-text">Название категории</p>
+								<p class="card-text"><small class="text-muted">134 товара</small></p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="card mb-3 col-4 col-md-3 col-sm-4 border-0 .d-block .d-sm-none d-md-none">
+					<div class="row no-gutters myImageEffect">
+						<div class="col-md-4 d-none d-sm-none d-md-block">
+							<img src="http://placehold.it/60x60" class="card-img" alt="...">
+						</div>
+						<div class="col-md-8 border-right ">
+							<div class="card-body p-0 m-2">
+								<p class="card-text">Название категории</p>
+								<p class="card-text"><small class="text-muted">134 товара</small></p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="card mb-3 col-4 col-md-3 col-sm-4 border-0 .d-block .d-sm-none d-md-none">
+					<div class="row no-gutters myImageEffect">
+						<div class="col-md-4 d-none d-sm-none d-md-block">
+							<img src="http://placehold.it/60x60" class="card-img" alt="...">
+						</div>
+						<div class="col-md-8 border-right ">
+							<div class="card-body p-0 m-2">
+								<p class="card-text">Название категории</p>
+								<p class="card-text"><small class="text-muted">134 товара</small></p>
+							</div>
+						</div>
+					</div>
+				</div>
+
+
+			</div>
+			<div class="row no-gutters mt-5">
+				<div class="col-md-3 d-none d-sm-none d-md-block p-2">
+					<strong>Все категории</strong>
+					<ul class="p-0 mt-1 u-list"
+						style="text-decoration: none; list-style-type: none; line-height: 26px;">
+						<li><a href="#">категория в которой нашли что-то</a> <span class="card-text"><small
+									class="text-muted">(xxx)</small></span></li>
+						<li><a href="#">категория в которой нашли что-то</a> <span class="card-text"><small
+									class="text-muted">(xxx)</small></span></li>
+						<li><a href="#">категория в которой нашли что-то</a> <span class="card-text"><small
+									class="text-muted">(xxx)</small></span></li>
+						<li><a href="#">категория в которой нашли что-то</a> <span class="card-text"><small
+									class="text-muted">(xxx)</small></span></li>
+						<li><a href="#">категория в которой нашли что-то</a> <span class="card-text"><small
+									class="text-muted">(xxx)</small></span></li>
+						<li><a href="#">категория в которой нашли что-то</a> <span class="card-text"><small
+									class="text-muted">(xxx)</small></span></li>
+						<li><a href="#">категория в которой нашли что-то</a> <span class="card-text"><small
+									class="text-muted">(xxx)</small></span></li>
+						<li><a href="#">категория в которой нашли что-то</a> <span class="card-text"><small
+									class="text-muted">(xxx)</small></span></li>
+						<li><a href="#">категория в которой нашли что-то</a> <span class="card-text"><small
+									class="text-muted">(xxx)</small></span></li>
+						<li><a href="#">категория в которой нашли что-то</a> <span class="card-text"><small
+									class="text-muted">(xxx)</small></span></li>
+						<li><a href="#">категория в которой нашли что-то</a> <span class="card-text"><small
+									class="text-muted">(xxx)</small></span></li>
+						<li><a href="#">категория в которой нашли что-то</a> <span class="card-text"><small
+									class="text-muted">(xxx)</small></span></li>
+						<li><a href="#">категория в которой нашли что-то</a> <span class="card-text"><small
+									class="text-muted">(xxx)</small></span></li>
+						<li><a href="#">категория в которой нашли что-то</a> <span class="card-text"><small
+									class="text-muted">(xxx)</small></span></li>
+						<li><a href="#">категория в которой нашли что-то</a> <span class="card-text"><small
+									class="text-muted">(xxx)</small></span></li>
+						<li><a href="#">категория в которой нашли что-то</a> <span class="card-text"><small
+									class="text-muted">(xxx)</small></span></li>
+						<li><a href="#">категория в которой нашли что-то</a> <span class="card-text"><small
+									class="text-muted">(xxx)</small></span></li>
+						<li><a href="#">категория в которой нашли что-то </a><span class="card-text"><small
+									class="text-muted">(xxx)</small></span></li>
+						<li><a href="#">категория в которой нашли что-то </a><span class="card-text"><small
+									class="text-muted">(xxx)</small></span></li>
+						<li><a href="#">категория в которой нашли что-то </a><span class="card-text"><small
+									class="text-muted">(xxx)</small></span></li>
+					</ul>
+					<a class="list-toggle" href="#"
+						onClick='this.innerHTML==="Скрыть" ? this.innerHTML="Показать еще 10 категорий..." : this.innerHTML="Скрыть"'>Показать
+						еще 10 категорий...</a>
+					<p class="mt-5"><strong>Цена, валюта</strong></p>
+					<div id='options' class="mt-3 p-0">
+						<form method='post' class="form-group p-0 form-control-sm">
+							<div class="row no-gutters col-12 p-0">
+								<div class="col-sm-12 col-md-6">
+									<label for='price'>
+										<span class="text-muted">от</span>
+										<input id="myInput" type="text" name="price" id="price" maxlength="7"
+											class="col-9 rounded " style="height: 2.5rem; width: 80%;">
+									</label>
+								</div>
+								<div class="col-sm-12 col-md-6">
+									<label for='price2'>
+										<span class="text-muted">до</span>
+										<input id="myInput" type="text" name="price" id="price2" maxlength="7"
+											class="col-9 rounded" style="height: 2.5rem; width: 80%;">
+										<span class="text-muted" id="myRub">Р</span>
+									</label>
+								</div>
+							</div>
+						</form>
+						<div id="slider_price" class="col-12 mt-3 mt-4"></div>
+					</div>
+
+
+					<div class="d-flex justify-content-between align-items-end align-items-center mt-5 mb-2 ">
+						<span><strong class="">Бренды</strong></span>
+						<span class="text-muted btn" onclick="clearcheckbox()"><small>Очистить</small>
+
+						</span></div>
+					<div class="form-check mb-2">
+
+						<input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+						<label class="form-check-label" for="defaultCheck1">
+							Бренд <span class="card-text"><small class="text-muted">(xxx)</small></span>
+						</label>
+					</div>
+					<div class="form-check mb-2">
+						<input class="form-check-input" type="checkbox" value="" id="defaultCheck2">
+						<label class="form-check-label" for="defaultCheck1">
+							Бренд <span class="card-text"><small class="text-muted">(xxx)</small></span>
+						</label>
+					</div>
+					<div class="form-check mb-2">
+						<input class="form-check-input" type="checkbox" value="" id="defaultCheck3">
+						<label class="form-check-label" for="defaultCheck2">
+							Бренд <span class="card-text"><small class="text-muted">(xxx)</small></span>
+						</label>
+					</div>
+
+				</div>
+				<div class="col-md-9 row no-gutters p-2">
+					<div class="col-12 row no-gutters p-2 ">
+						<div class="col-sm-12 col-md-8 myActiveLink mt-2">
+							<span class="text-dark mr-3">Сортировать&nbsp;по:</span>
+							<a class="mr-3 autoFocus" href="#" id="myActive1"><span>популярности</span></a>
+							<a class="mr-3" href="#" id="myActive2"><span>сначала&nbsp;дешевые</span></a>
+							<a class="mr-3" href="#" id="myActive3"><span>сначала&nbsp;дорогие</span></a>
+						</div>
+						<div
+							class="col-sm-12 col-md-4 row justify-content-md-end justify-content-sm-start no-gutters mt-2">
+							<span class="text-dark mr-2">показывать&nbsp;по:</span>
+							<div class="form-group">
+								<select class="form-control-sm" id="GroupSelect">
+									<option>24</option>
+									<option>48</option>
+									<option>96</option>
+								</select>
+							</div>
+						</div>
+					</div>
+					<div class="col-12 p-2">
+						<button type="button" class="btn btn-warning btn-sm border-0" data-toggle="button"
+							style="background-color:rgba(241,189,69,0.5);">Уточнение</button>
+						<button type="button" class="btn btn-warning btn-sm border-0" data-toggle="button"
+							style="background-color:rgba(241,189,69,0.5);">Уточнение</button>
+						<button type="button" class="btn btn-warning btn-sm border-0" data-toggle="button"
+							style="background-color:rgba(241,189,69,0.5);">Уточнение</button>
+						<button type="button" class="btn btn-warning btn-sm border-0" data-toggle="button"
+							style="background-color:rgba(241,189,69,0.5);">Уточнение</button>
+					</div>
+
+					<div class="card border-0 mb-5 col-md-4 col-sm-6 p-2">
+						<img src="http://placehold.it/260x260" class="card-img-top" alt="...">
+						<div class="card-body p-0 mt-2">
+							<p class="card-text">Наименование товара, которое не более 2 строк.</p>
+							<strong>XX XXX, $</strong>
+							<span class="ml-2 text-secondary">xx xxx, $</span>
+							<a href="#" class="btn btn-warning btn-block mt-2">Кнопка</a>
+						</div>
+					</div>
+					<div class="card border-0 mb-5 col-md-4 col-sm-6 p-2">
+						<img src="http://placehold.it/260x260" class="card-img-top" alt="...">
+						<div class="card-body p-0 mt-2">
+							<p class="card-text">Наименование товара, которое не более 2 строк.</p>
+							<strong>XX XXX, $</strong>
+							<span class="ml-2 text-secondary">xx xxx, $</span>
+							<a href="#" class="btn btn-warning btn-block mt-2">Кнопка</a>
+						</div>
+					</div>
+					<div class="card border-0 mb-5 col-md-4 col-sm-6 p-2">
+						<img src="http://placehold.it/260x260" class="card-img-top" alt="...">
+						<div class="card-body p-0 mt-2">
+							<p class="card-text">Наименование товара, которое не более 2 строк.</p>
+							<strong>XX XXX, $</strong>
+							<span class="ml-2 text-secondary">xx xxx, $</span>
+							<a href="#" class="btn btn-warning btn-block mt-2">Кнопка</a>
+						</div>
+					</div>
+					<div class="card border-0 mb-5 col-md-4 col-sm-6 p-2">
+						<img src="http://placehold.it/260x260" class="card-img-top" alt="...">
+						<div class="card-body p-0 mt-2">
+							<p class="card-text">Наименование товара, которое не более 2 строк.</p>
+							<strong>XX XXX, $</strong>
+							<span class="ml-2 text-secondary">xx xxx, $</span>
+							<a href="#" class="btn btn-warning btn-block mt-2">Кнопка</a>
+						</div>
+					</div>
+					<div class="card border-0 mb-5 col-md-4 col-sm-6 p-2">
+						<img src="http://placehold.it/260x260" class="card-img-top" alt="...">
+						<div class="card-body p-0 mt-2">
+							<p class="card-text">Наименование товара, которое не более 2 строк.</p>
+							<strong>XX XXX, $</strong>
+							<span class="ml-2 text-secondary">xx xxx, $</span>
+							<a href="#" class="btn btn-warning btn-block mt-2">Кнопка</a>
+						</div>
+					</div>
+					<div class="card border-0 mb-5 col-md-4 col-sm-6 p-2">
+						<img src="http://placehold.it/260x260" class="card-img-top" alt="...">
+						<div class="card-body p-0 mt-2">
+							<p class="card-text">Наименование товара, которое не более 2 строк.</p>
+							<strong>XX XXX, $</strong>
+							<span class="ml-2 text-secondary">xx xxx, $</span>
+							<a href="#" class="btn btn-warning btn-block mt-2">Кнопка</a>
+						</div>
+					</div>
+					<div class="card border-0 mb-5 col-md-4 col-sm-6 p-2">
+						<img src="http://placehold.it/260x260" class="card-img-top" alt="...">
+						<div class="card-body p-0 mt-2">
+							<p class="card-text">Наименование товара, которое не более 2 строк.</p>
+							<strong>XX XXX, $</strong>
+							<span class="ml-2 text-secondary">xx xxx, $</span>
+							<a href="#" class="btn btn-warning btn-block mt-2">Кнопка</a>
+						</div>
+					</div>
+					<div class="card border-0 mb-5 col-md-4 col-sm-6 p-2">
+						<img src="http://placehold.it/260x260" class="card-img-top" alt="...">
+						<div class="card-body p-0 mt-2">
+							<p class="card-text">Наименование товара, которое не более 2 строк.</p>
+							<strong>XX XXX, $</strong>
+							<span class="ml-2 text-secondary">xx xxx, $</span>
+							<a href="#" class="btn btn-warning btn-block mt-2">Кнопка</a>
+						</div>
+					</div>
+					<div class="card border-0 mb-5 col-md-4 col-sm-6 p-2">
+						<img src="http://placehold.it/260x260" class="card-img-top" alt="...">
+						<div class="card-body p-0 mt-2">
+							<p class="card-text">Наименование товара, которое не более 2 строк.</p>
+							<strong>XX XXX, $</strong>
+							<span class="ml-2 text-secondary">xx xxx, $</span>
+							<a href="#" class="btn btn-warning btn-block mt-2">Кнопка</a>
+						</div>
+					</div>
+
+
+
+
+					<div class="col-12 p-2">
+						<nav class="" aria-label="...">
+							<ul class="pagination pagination-sm ">
+								<li class="page-item active " aria-current="page">
+									<span class="page-link ">
+										<b>1</b>
+										<span class="sr-only">(current)</span>
+									</span>
+								</li>
+								<li class="page-item"><a class="page-link text-muted myImageEffect" href="#">2</a></li>
+								<li class="page-item"><a class="page-link text-dark myImageEffect" href="#">3</a></li>
+								<li class="page-item"><a class="page-link text-dark myImageEffect" href="#">...</a></li>
+								<li class="page-item"><a class="page-link text-muted myImageEffect" href="#">13</a></li>
+								<li class="page-item"><a class="page-link myImageEffect" href="#"><i
+											class="fas fa-angle-right"></i></a></li>
+							</ul>
+						</nav>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+
+
+	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+		integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
+	</script>
+	<script src='http://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js'></script>
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+		integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+	</script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+		integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
+	</script>
+	<script src="main.js"></script>
+</body>
+
+</html>
