@@ -17,7 +17,7 @@
 		<header>
 			<div class="d-flex bd-highlight align-items-center p-2 mb-3"
 				style="background-color: black; height: 100px;">
-				<div class="text-white">Шапка сайта</div>
+				<div class="text-white pl-3">Шапка сайта</div>
 			</div>
 		</header>
 		<div class="container-fluid">
@@ -30,7 +30,7 @@
 					<input id="userInputSearch" type="search" class="form-control" placeholder="Input search..."
 						aria-label="" aria-describedby="basic-addon1">
 				</div>
-				<div class=" col-12 col-sm-3 col-md-2 col-lg-1">
+				<div class=" col-12 col-sm-3 col-md-2 col-lg-1 ">
 					<button class="btn btn-warning btn-block" type="button" onclick="myUserSearch()"><span>Найти</span>
 					</button>
 				</div>
@@ -42,7 +42,7 @@
 				</div>
 			</div>
 
-			<div class="row mt-3 ml-1 align-items-center" id="searchBlock" style="display: none;">
+			<div class="row mt-3 align-items-center pl-3" id="searchBlock" style="display: none;">
 				<h4 class="mr-4"> Результаты по запросу</h4>
 				<span class="text-muted" id="userSearch"></span>
 				<span class="text-muted" id="userHistory"></span>
@@ -134,8 +134,8 @@
 
 			</div>
 			<div class="row no-gutters">
-				<div class="col-md-3 d-none d-sm-none d-md-block p-2">
-					<div class=""><strong>Все категории</strong>
+				<div class="col-md-3 d-none d-sm-none d-md-block no-gutters">
+					<div class="col-12"><strong>Все категории</strong>
 					<ul class="p-0 mt-1 u-list"
 						style="text-decoration: none; list-style-type: none; line-height: 26px;">
 						<li><a href="#">категория в которой нашли что-то</a> <span class="card-text"><small
@@ -183,9 +183,10 @@
 						onClick='this.innerHTML==="Скрыть" ? this.innerHTML="Показать еще 10 категорий..." : this.innerHTML="Скрыть"'>Показать
 						еще 10 категорий...</a>
 					</div>
-					<p class="mt-5"><strong>Цена, валюта</strong></p>
-					<div id='options' class="mt-3 p-0">
-						<form method='post' class="form-group p-0 form-control-sm">
+				
+					<p class="mt-4"><strong>Цена, валюта</strong></p>
+					<div id='options' class="mt-3">
+						<form method='post' class="form-group form-control-sm">
 							<div class="row no-gutters col-12 p-0">
 								<div class="col-sm-12 col-md-6">
 									<label for='price'>
@@ -194,7 +195,7 @@
 											class="col-9 rounded " style="height: 2.5rem; width: 80%;">
 									</label>
 								</div>
-								<div class="col-sm-12 col-md-6">
+								<div class="col-sm-12 col-md-6 mb-3">
 									<label for='price2'>
 										<span class="text-muted">до</span>
 										<input type="text" name="price" id="price2" maxlength="7"
@@ -204,11 +205,13 @@
 								</div>
 							</div>
 						</form>
-						<div id="slider_price" class="col-12 mt-3 mt-4"></div>
+						
+						<div class="m-3 mt-4" id="slider_price"></div>
+				
 					</div>
 
 
-					<div class="d-flex justify-content-between align-items-end align-items-center mt-5 mb-2 ">
+					<div class="d-flex justify-content-between align-items-end align-items-center mt-3 mb-2 ">
 						<span><strong class="">Бренды</strong></span>
 						<span class="text-muted btn" onclick="clearcheckbox()"><small>Очистить</small>
 
@@ -236,16 +239,16 @@
 				</div>
 				<div class="col-md-9 row no-gutters">
 					<div class="col-12 row no-gutters pl-2">
-						<div class="col-sm-12 col-md-8 myActiveLink mt-2">
+						<div class="col-sm-12 col-md-8 myActiveLink mb-1">
 							<span class="text-dark">Сортировать&nbsp;по:</span>
 							<a class="mr-3 autoFocus" href="#" id="myActive1"><span>популярности</span></a>
 							<a class="mr-3" href="#" id="myActive2"><span>сначала&nbsp;дешевые</span></a>
 							<a class="mr-3" href="#" id="myActive3"><span>сначала&nbsp;дорогие</span></a>
 						</div>
 						<div
-							class="col-sm-12 col-md-4 row justify-content-md-end justify-content-sm-start no-gutters">
-							<span class="text-dark mr-2">показывать&nbsp;по:</span>
-							<div class="form-group">
+							class="col-12 col-md-4 row justify-content-md-end justify-content-sm-start no-gutters">
+							<span class="text-dark mr-2 ml-3">показывать&nbsp;по:</span>
+							<div class="form-group pr-2">
 								<select class="form-control-sm" id="GroupSelect">
 									<option>24</option>
 									<option>48</option>

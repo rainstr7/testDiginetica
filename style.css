@@ -15,6 +15,9 @@ body {
   line-height: 130%;
   color: #333333;
 }
+.container{
+  max-width: 1310px !important;
+}
 
 .u-list li:nth-child(n+10) {
   display: none;
@@ -24,9 +27,7 @@ body {
   display: list-item;
 }
 
-.container {
-  max-width: 1280px !important;
-}
+
 .ui-slider-handle{
   background-color: #ffffff !important;
   border: 2px solid #000000 !important;
