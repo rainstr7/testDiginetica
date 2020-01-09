@@ -4,7 +4,7 @@
   }
  }
  @media (max-width: 1158px) { 
-  #myInput{
+  #price, #price2{
     font-size: 12px;
     width: 100%;
   }
